@@ -23,11 +23,22 @@ You will need to have the following installed on your local machine in order for
 | Required | Link                                              |
 | -------- | ------------------------------------------------- |
 | Docker   | https://www.docker.com/products/docker-desktop    |
+| Graphql  | -                                                 |
 
 
 ### Installing <a name = "installing"></a>
 
+Install npm packages express, graphql and express-graphql in your respective project folder.
+Run this command using command line.
+```
+npm install express graphql express-graphql
+
+```
+
+
 Clone this repository to your desired directory.
+
+
 
 ```
 
