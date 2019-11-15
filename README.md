@@ -46,7 +46,7 @@ docker-compose up
 
 ```
 
-The server should be up and running on http://localhost:3000 and you will be able to hit the API endpoints with Postman / Insomnia / Other API tools.
+The server should be up and running on http://localhost and you will be able to hit the API endpoints with Postman / Insomnia / Other API tools.
 
 
 ## Built Using <a name = "built_using"></a>
