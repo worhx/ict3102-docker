@@ -37,9 +37,10 @@ npm install express graphql express-graphql
 
 
 Clone this repository to your desired directory.
-
-
-
+```
+git clone https://github.com/worhx/ict3102-docker.git
+```
+Compose docker
 ```
 
 docker-compose up
