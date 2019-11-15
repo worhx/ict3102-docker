@@ -1,6 +1,6 @@
 # ICT3102 - Docker
 
-## 📝 Table of Contents
+## Table of Contents
 
 - [About](#about)
 - [Getting Started](#getting_started)
@@ -38,11 +38,11 @@ docker-compose up
 The server should be up and running on http://localhost:3000 and you will be able to hit the API endpoints with Postman / Insomnia / Other API tools.
 
 
-## ⛏️ Built Using <a name = "built_using"></a>
+## Built Using <a name = "built_using"></a>
 
 - [Python](https://www.python.org/) - Rest
 
 
-## ✍️ Authors <a name = "authors"></a>
+## Authors <a name = "authors"></a>
 
 - SIT ICT SE - Class of 2021 ICT3102 Team 2
