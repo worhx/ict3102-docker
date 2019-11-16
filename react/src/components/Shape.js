@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import BgImage from "./../scenebg.jpg"
 
 import {
     Rectangle
@@ -23,18 +24,15 @@ import {
 
     const Shape = ({ label, cornerleft, cornertop, height, width }) => (
         <div>
-            <Rectangle corner={[cornerleft, cornertop]} height={height} width={width} color='#ff8f00'>
-                <div className="label">
-                    {label}
-                </div>
+            <Rectangle corner={[cornerleft, cornertop]} height={height} width={width} color='#3AEE00'>
             </Rectangle>
             <div
                 style={{
-                    left: `${cornerleft+10}px`,
-                    top: `${cornertop-55}px`,
+                    left: `${cornerleft+4}px`,
+                    top: `${cornertop-30}px`,
                     position: 'absolute',
                     color: '#fff',
-                    fontSize: '25px'
+                    fontSize: '25px',
                 }}>
                 <p>{label}</p>
              </div>

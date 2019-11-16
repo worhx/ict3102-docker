@@ -12,5 +12,19 @@ services:
             - start
         networks: 
             - temp_network
+    flask:
+        build:
+            context: python
+            dockerfile: Dockerfile
+        ports:
+            - "1800:1800"
+        volumes: ['./python/cnn.py:/app/cnn.py']
+        environment:
+            - FLASK_DEBUG=1
+        entrypoint:
+            - python
+            - cnn.py
+        networks: 
+            - temp_network    
 networks:
   temp_network:
