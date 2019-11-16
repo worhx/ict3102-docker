@@ -4,7 +4,7 @@
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Prerequisites](#prerequisites)
+- [Prerequisites](#prerequisities)
 - [Installing](#installing)
 - [Authors](#authors)
 
@@ -58,12 +58,14 @@ The server should be up and running on http://localhost and you will be able to 
 ## Authors <a name = "authors"></a>
 
 - SIT ICT SE - Class of 2021 ICT3102 Team 2
-- LinkedIn
 
-[Cassandra Leong Sok Yee](https://www.linkedin.com/in/xxx/) - 1702555
-[Chen Guan Hua](https://www.linkedin.com/in/guanhua-chen-04a420174/) - 1702673
-[Ong Xuan](https://www.linkedin.com/in/xuan-ong-50752910a/) 
-[Quek Jun Hao](https://www.linkedin.com/in/jun-hao-quek-5455a0175/) - 1700512
-[Ker Beng Hian](https://www.linkedin.com/in/benghianker/) - 1701591
-[Tan Qin Xiang](https://www.linkedin.com/in/qin-xiang-tan-19570a113/) -1701217
+
+| Student ID |         LinkedIn                                              |
+| -------- | ------------------------------------------------- |
+| 1702555| [Cassandra Leong Sok Yee](https://www.linkedin.com/in/xxx/)  |
+| 1702673 | [Chen Guan Hua](https://www.linkedin.com/in/guanhua-chen-04a420174/) |
+| 1702419 | [Ong Xuan](https://www.linkedin.com/in/xuan-ong-50752910a/) | 
+| 1700512 | [Quek Jun Hao](https://www.linkedin.com/in/jun-hao-quek-5455a0175/) | 
+| 1701591 | [Ker Beng Hian](https://www.linkedin.com/in/benghianker/) |
+| 1701217 | [Tan Qin Xiang](https://www.linkedin.com/in/qin-xiang-tan-19570a113/)  |
 
