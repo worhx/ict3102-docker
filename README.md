@@ -23,18 +23,9 @@ You will need to have the following installed on your local machine in order for
 | Required | Link                                              |
 | -------- | ------------------------------------------------- |
 | Docker   | https://www.docker.com/products/docker-desktop    |
-| Graphql  | -                                                 |
 
 
 ### Installing <a name = "installing"></a>
-
-Install npm packages express, graphql and express-graphql in your respective project folder.
-Run this command using command line.
-```
-npm install express graphql express-graphql
-
-```
-
 
 Clone this repository to your desired directory.
 ```
@@ -46,6 +37,14 @@ Compose docker
 docker-compose up
 
 ```
+
+### Setting up GraphQL <a name = "Running GraphQL server"></a>
+
+Using command line from the graphQL project folder, run this command : 
+```
+node app.js
+```
+Then head to the URL: http://localhost:3000/graphql
 
 The server should be up and running on http://localhost and you will be able to hit the API endpoints with Postman / Insomnia / Other API tools.
 
