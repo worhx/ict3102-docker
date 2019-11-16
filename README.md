@@ -59,6 +59,7 @@ The server should be up and running on http://localhost and you will be able to 
 
 - SIT ICT SE - Class of 2021 ICT3102 Team 2
 - LinkedIn
+
 [Cassandra Leong Sok Yee](https://www.linkedin.com/in/xxx/) - 1702555
 [Chen Guan Hua](https://www.linkedin.com/in/guanhua-chen-04a420174/) - 1702673
 [Ong Xuan](https://www.linkedin.com/in/xuan-ong-50752910a/) 
