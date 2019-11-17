@@ -6,7 +6,7 @@ services:
             dockerfile: Dockerfile
         ports:
             - "80:3000"
-        volumes: ['./react/:/app']
+        volumes: ['./react/src:/app/src']
         entrypoint:
             - npm
             - start
