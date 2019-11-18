@@ -52,8 +52,10 @@ The server should be up and running on http://localhost and you will be able to 
 
 ## Built Using <a name = "built_using"></a>
 
-- [Python](https://www.python.org/) - Rest
-
+- [Python](https://www.python.org/)
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+- [Nodejs](https://nodejs.org/en/)
+- [React](https://reactjs.org/)
 
 ## Authors <a name = "authors"></a>
 
@@ -62,7 +64,7 @@ The server should be up and running on http://localhost and you will be able to 
 
 | Student ID |         LinkedIn                                              |
 | -------- | ------------------------------------------------- |
-| 1702555| [Cassandra Leong Sok Yee](https://www.linkedin.com/in/cassandra-leong-738317bb)  |
+| 1702555 | [Cassandra Leong Sok Yee](https://www.linkedin.com/in/cassandra-leong-738317bb)  |
 | 1702673 | [Chen Guan Hua](https://www.linkedin.com/in/guanhua-chen-04a420174/) |
 | 1702419 | [Ong Xuan](https://www.linkedin.com/in/xuan-ong-50752910a/) | 
 | 1700512 | [Quek Jun Hao](https://www.linkedin.com/in/jun-hao-quek-5455a0175/) | 
