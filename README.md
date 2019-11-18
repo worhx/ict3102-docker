@@ -23,7 +23,6 @@ You will need to have the following installed on your local machine in order for
 | Required | Link                                              |
 | -------- | ------------------------------------------------- |
 | Docker   | https://www.docker.com/products/docker-desktop    |
-| Node.js  | https://nodejs.org/en/                           |
 
 
 ### Installing <a name = "installing"></a>
@@ -32,7 +31,8 @@ Clone this repository to your desired directory.
 ```
 git clone https://github.com/worhx/ict3102-docker.git
 ```
-Compose docker
+Docker
+
 ```
 
 docker-compose up
