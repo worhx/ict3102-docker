@@ -1,4 +1,4 @@
-FROM python:3.6
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.6
 
 WORKDIR /app
 
@@ -19,4 +19,4 @@ COPY . .
 
 RUN wget https://pjreddie.com/media/files/yolov2.weights -O ./cfg/yolov2.weights
 
-CMD ["python", "cnn.py"]
+CMD ["python", "main.py"]

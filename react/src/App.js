@@ -99,7 +99,7 @@ const onChange = event => {
         // Create Form Data
         const payload = new FormData();
         payload.append('file', event.dataTransfer.files[0]);
-        fetch('http://localhost:1800/api/yolo', {
+        fetch('http://localhost:90/api/yolo', {
           			method: 'POST',
           			body: payload
               })

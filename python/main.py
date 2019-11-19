@@ -12,8 +12,8 @@ from werkzeug.utils import secure_filename
 from flask_cors import CORS, cross_origin
 import json
 app = Flask(__name__)
+
 CORS(app, resources={r"/*": {"origins": "*"}})
-from darkflow.cli import cliHandler
 
 font = cv2.FONT_HERSHEY_SIMPLEX
 UPLOAD_FOLDER = './img'
@@ -22,6 +22,9 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 options = {"model": "./cfg/yolo.cfg",
                "load": "./cfg/yolov2.weights", "threshold": 0.1, "gpu": 1.0, "json": True}
 tfnet = TFNet(options)
+@app.route("/test/nia", methods=['GET'])
+def test():
+    return"hello"
 
 def fileUpload():
     target = os.path.join(UPLOAD_FOLDER)
@@ -46,4 +49,4 @@ def yoloapi():
     return str(result)
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=1800, debug=True)
+    app.run(host='0.0.0.0', port=1800, debug=False)
