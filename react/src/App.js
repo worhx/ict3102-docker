@@ -1,10 +1,12 @@
 import React, { useState }from "react";
 import './App.css';
-import Cover from './components/Cover'
+import Cover from './components/Cover';
 import BgImage from './scenebg.jpg';
 // import FileUpload from './components/FileUpload';
 // import { Line } from 'react-lineto';
-import Shape from './components/Shape'
+import Shape from './components/Shape';
+import ImageUploader from 'react-images-upload';
+import icon from '../src/drop_image.png'
 
 
 const App = () => {
@@ -28,7 +30,7 @@ const App = () => {
   const [listOfRect, setListOfRect] = useState([]);
 
   // const [listOfRect, setListOfRect] = useState([{label: "Clock", topleft: {x: 123, y: 321}, bottomright: {x: 234, y: 567}}]);
-// {'label': 'traffic light', 'confidence': 0.46783975, 'topleft': {'x': 297, 'y': 83}, 'bottomright': {'x': 317, 'y': 122}}
+  // {'label': 'traffic light', 'confidence': 0.46783975, 'topleft': {'x': 297, 'y': 83}, 'bottomright': {'x': 317, 'y': 122}}
 
 
   const onDragEnter = event => {
@@ -54,6 +56,36 @@ const App = () => {
     }
     event.preventDefault();
 }
+
+const onChange = event => {
+  // Begin Reading File
+  const files = event.target.files;
+
+  let file = event.target.files[0];
+  const reader = new FileReader();
+  reader.readAsDataURL(file);
+
+  // Create Form Data
+  const payload = new FormData();
+  payload.append('file', file);
+  fetch('http://localhost:1800/api/yolo', {
+          method: 'POST',
+          body: payload
+        })
+        .then(response => {
+          response.text().then(body => {
+            const convert_to_proper_json_format = body.replace(/'/g, '"');
+            const json_object = JSON.parse(convert_to_proper_json_format);
+
+            setListOfRect(Array.from(json_object));
+
+            setStatus('Results Below');
+            setEnableDragDrop(true);
+            // this.setState({ imageURL: `http://localhost:5000/${body.file}` });
+          });
+        });
+    setEnableDragDrop(false);
+} 
 
   const onDrop = event => {
     const supportedFilesTypes = ['image/jpeg', 'image/png'];
@@ -127,7 +159,8 @@ const App = () => {
     setStatus('Drop Here');
     setPercentage(0);
     setEnableDragDrop(true);
-};
+    // setEnableUpload(true);
+  };
 
   // const test = React.createElement(Rectangle, {corner: [430, 160], height: 500, width: 1000, color: '#ff8f00'})
   const SHAPES = [
@@ -143,36 +176,60 @@ const App = () => {
   
 
   return (
-    <div>
+  <div>
     <div>
       <Cover/>
-    <div className="ImagePreview">
-                <div style={{ backgroundImage: `url(${BgImage})` }} />
-            </div>
+      <div className="ImagePreview">
+          <div style={{ backgroundImage: `url(${BgImage})` }} />
+      </div>
     </div>
-<div className="App" onDragEnter={onDragEnter} onDragLeave={onDragLeave} onDragOver={doNothing} onDrop={onDragLeave}>
+    <div className="imageHeader">
+       <p>Drop or upload your image below!</p>
+       <p style={{fontSize: 'smaller'}}>Else...You would not be able to see the CNN object detection</p>
+    </div>
+    <div className="App" onDragEnter={onDragEnter} onDragLeave={onDragLeave} onDragOver={doNothing} onDrop={onDragLeave}>
      {/* <div className={`ImagePreview ${preview ? 'Show' : ''}`}>
           <div style={{ backgroundImage: `url(${preview})` }}></div>
      </div> */}
-     <div className={`DropArea ${status === 'Drop' ? 'Over' : ''} ${status.indexOf('%') > -1 || status === 'Done' ? 'Uploading' : ''}`} onDragOver={onDragOver} onDragLeave={onDragEnter} onDrop={onDrop}><div className={`ImageProgress ${preview ? 'Show' : ''}`}>
-              <div className="ImageProgressImage" style={{ backgroundImage: `url(${preview})` }}></div>
-              <div className="ImageProgressUploaded" style={{ backgroundImage: `url(${preview})`, clipPath: `inset(${100 - Number(percentage)}% 0 0 0)`}}></div>
-           </div>
-           <div className={`Status ${status.indexOf('%') > -1 || status === 'Done' ? 'Uploading' : ''}`}>{status}</div>
-           {status.indexOf('%') > -1 && <div className="Abort" onClick={onAbortClick}><span>&times;</span></div>}
+      <div className={`DropArea ${status === 'Drop' ? 'Over' : ''} ${status.indexOf('%') > -1 || status === 'Done' ? 'Uploading' : ''}`} onDragOver={onDragOver} onDragLeave={onDragEnter} onDrop={onDrop}>
+        <div className={`ImageProgress ${preview ? 'Show' : ''}`}>
+          <div className="ImageProgressImage" style={{ backgroundImage: `url(${preview})` }}></div>
+          <div className="ImageProgressUploaded" style={{ backgroundImage: `url(${preview})`, clipPath: `inset(${100 - Number(percentage)}% 0 0 0)`}}></div>
+        </div>
+            <img className="dropImage" src={icon} />
+            <div className={`Status ${status.indexOf('%') > -1 || status === 'Done' ? 'Uploading' : ''}`}>{status}</div>
+            {status.indexOf('%') > -1 && <div className="Abort" onClick={onAbortClick}><span>&times;</span></div>}
       </div>
-</div>
 
-{/* <FileUpload/> */}
-  <div className="centerRectangle">
-  <img src={preview}/>
-  {/* <img className="centerImage" src={preview}/> */}
-      {listOfRect.map(shape => (
-        <Shape label={shape.label} cornerleft={shape.topleft.x} cornertop={shape.topleft.y} height={shape.bottomright.y-shape.topleft.y} width={shape.bottomright.x-shape.topleft.x} key={shape.label+shape.topleft.x}/>
-      ))}
+      <div className={`uploadArea ${status === 'Drop' ? 'Over' : ''} ${status.indexOf('%') > -1 || status === 'Done' ? 'Uploading' : ''}`} onChange={onChange}>
+        <div className={`ImageProgress ${preview ? 'Show' : ''}`}>
+          <div className="ImageProgressImage" style={{ backgroundImage: `url(${preview})` }}></div>
+          <div className="ImageProgressUploaded" style={{ backgroundImage: `url(${preview})`, clipPath: `inset(${100 - Number(percentage)}% 0 0 0)`}}></div>
+        </div>
+        <ImageUploader
+          buttonClassName='uploadButton'
+          withIcon={true}
+          buttonText='Choose images'
+          singleImage={true}
+          // onChange={onChange}
+          // onDrop={onDrop}
+          imgExtension={['.jpg', '.gif', '.png', '.gif']}
+          maxFileSize={5242880}
+          withPreview={true}
+        />
+      </div>
+    </div>
+
+    {/* <FileUpload/> */}
+    <div className="centerRectangle">
+    <img src={preview}/>
+    {/* <img className="centerImage" src={preview}/> */}
+        {listOfRect.map(shape => (
+          <Shape label={shape.label} cornerleft={shape.topleft.x} cornertop={shape.topleft.y} height={shape.bottomright.y-shape.topleft.y} width={shape.bottomright.x-shape.topleft.x} key={shape.label+shape.topleft.x}/>
+        ))}
+    </div>
+    {/* <Shape/> */}
   </div>
-{/* <Shape/> */}
-</div>
   );
 };
 export default App;

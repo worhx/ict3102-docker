@@ -19,7 +19,7 @@ class Cover extends Component {
                     <h1>Practical CNN Object Detection</h1>
                 </div>
                 <div className="author">
-                    <p>Team 07</p>
+                    <p className="teamStyle">Team 07</p>
                 </div>
             </div>
         )
