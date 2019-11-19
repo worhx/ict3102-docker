@@ -21,6 +21,7 @@ const App = () => {
 
   const [status, setStatus] = useState('Drop Here');
   const [preview, setPreview] = useState(null);
+  const [uploadPreview, setUploadPreview] = useState(null);
   const doNothing = event => event.preventDefault();
   const [percentage, setPercentage] = useState(0);
   const [enableDragDrop, setEnableDragDrop] = useState(true);
@@ -63,6 +64,7 @@ const onChange = event => {
 
   let file = event.target.files[0];
   const reader = new FileReader();
+  reader.onload = e => setUploadPreview(e.target.result);
   reader.readAsDataURL(file);
 
   // Create Form Data
@@ -159,7 +161,6 @@ const onChange = event => {
     setStatus('Drop Here');
     setPercentage(0);
     setEnableDragDrop(true);
-    // setEnableUpload(true);
   };
 
   // const test = React.createElement(Rectangle, {corner: [430, 160], height: 500, width: 1000, color: '#ff8f00'})
@@ -202,9 +203,9 @@ const onChange = event => {
       </div>
 
       <div className={`uploadArea ${status === 'Drop' ? 'Over' : ''} ${status.indexOf('%') > -1 || status === 'Done' ? 'Uploading' : ''}`} onChange={onChange}>
-        <div className={`ImageProgress ${preview ? 'Show' : ''}`}>
-          <div className="ImageProgressImage" style={{ backgroundImage: `url(${preview})` }}></div>
-          <div className="ImageProgressUploaded" style={{ backgroundImage: `url(${preview})`, clipPath: `inset(${100 - Number(percentage)}% 0 0 0)`}}></div>
+        <div className={`ImageProgress ${uploadPreview ? 'Show' : ''}`}>
+          <div className="ImageProgressImage" style={{ backgroundImage: `url(${uploadPreview})` }}></div>
+          <div className="ImageProgressUploaded" style={{ backgroundImage: `url(${uploadPreview})`, clipPath: `inset(${100 - Number(percentage)}% 0 0 0)`}}></div>
         </div>
         <ImageUploader
           buttonClassName='uploadButton'
@@ -215,14 +216,13 @@ const onChange = event => {
           // onDrop={onDrop}
           imgExtension={['.jpg', '.gif', '.png', '.gif']}
           maxFileSize={5242880}
-          withPreview={true}
         />
       </div>
     </div>
 
     {/* <FileUpload/> */}
     <div className="centerRectangle">
-    <img src={preview}/>
+    <img className="resultImage" src={preview || uploadPreview}/>
     {/* <img className="centerImage" src={preview}/> */}
         {listOfRect.map(shape => (
           <Shape label={shape.label} cornerleft={shape.topleft.x} cornertop={shape.topleft.y} height={shape.bottomright.y-shape.topleft.y} width={shape.bottomright.x-shape.topleft.x} key={shape.label+shape.topleft.x}/>
