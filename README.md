@@ -46,6 +46,7 @@ docker-compose up
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 - [Nodejs](https://nodejs.org/en/)
 - [React](https://reactjs.org/)
+- [Nginx](https://www.nginx.com/)
 
 ## Authors <a name = "authors"></a>
 
