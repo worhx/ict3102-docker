@@ -72,7 +72,7 @@ Lightweight
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- SIT ICT SE - Class of 2021 ICT3102 Team 7
+- SIT ICT SE - Class of 2021 ICT3102 Team 7 :singapore:
 
 
 | :email: Student ID & Email | Name & LinkedIn | GitHub |
