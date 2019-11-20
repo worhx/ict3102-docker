@@ -56,18 +56,18 @@ docker-compose up
 - [YOLO](https://pjreddie.com/darknet/yolo/)
 
 
-## Flask <a name = "flask"></a>
+# Flask <a name = "flask"></a>
 Lightweight 
 
-## Nginx <a name = "nginx"></a>
+# Nginx <a name = "nginx"></a>
 
-## Nodejs <a name = "nodejs"></a>
+# Nodejs <a name = "nodejs"></a>
 
-## Python <a name = "python"></a>
+# Python <a name = "python"></a>
 
-## React <a name = "react"></a>
+# React <a name = "react"></a>
 
-## YOLO <a name = "yolo"></a>
+# YOLO <a name = "yolo"></a>
 
 
 ## ✍️ Authors <a name = "authors"></a>
