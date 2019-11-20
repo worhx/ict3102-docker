@@ -11,7 +11,7 @@
 
 ## About <a name = "about"></a>
 
-This project aims tXXXXx
+This project allows users to upload an image onto the application and receive a new image with the YOLO image object detection implmented.
 
 ## Getting Started <a name = "getting_started"></a>
 
