@@ -31,10 +31,11 @@ import {
                     left: `${cornerleft+4}px`,
                     top: `${cornertop-30}px`,
                     position: 'absolute',
-                    color: '#fff',
+                    color: '#3AEE00',
                     fontSize: '25px',
                 }}>
                 <p>{label}</p>
+                {/* <p>{confidence}</p> */}
              </div>
 
         </div>
