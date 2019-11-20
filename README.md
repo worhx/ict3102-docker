@@ -40,17 +40,6 @@ docker-compose up
 
 ```
 
-### Setting up GraphQL <a name = "Running GraphQL server"></a>
-
-Using command line from the graphQL project folder, run this command : 
-```
-node app.js
-```
-Then head to the URL: http://localhost:3000/graphql
-
-The server should be up and running on http://localhost and you will be able to hit the API endpoints with Postman / Insomnia / Other API tools.
-
-
 ## Built Using <a name = "built_using"></a>
 
 - [Python](https://www.python.org/)
