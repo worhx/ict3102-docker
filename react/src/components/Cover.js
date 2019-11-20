@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import BgImage from "./../scenebg.jpg"
+import BgImage from "./../background.jpg"
 
 class Cover extends Component {
     dropRef = React.createRef()
@@ -19,7 +19,7 @@ class Cover extends Component {
                     <h1>Practical CNN Object Detection</h1>
                 </div>
                 <div className="author">
-                    <p>Team 07</p>
+                    <p className="teamStyle">Team 07</p>
                 </div>
             </div>
         )
