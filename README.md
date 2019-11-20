@@ -71,7 +71,7 @@ xxx
 - SIT ICT SE - Class of 2021 ICT3102 Team 7
 
 
-| :email: Student ID & Email | Name & LinkedIn | GitHub |
+| Student ID & Email | Name & LinkedIn | GitHub |
 | -------- | ------------------------------------------------- |--------|
 | [1702555](mailto:1702555@sit.singaporetech.edu.sg) | [Cassandra Leong Sok Yee](https://www.linkedin.com/in/cassandra-leong-738317bb)|[X](https://github.com/x)|  
 | [1702673](mailto:1702673@sit.singaporetech.edu.sg) | [Chen Guan Hua](https://www.linkedin.com/in/guanhua-chen-04a420174/) |[Lunchenmeat](https://github.com/Lunchenmeat)
