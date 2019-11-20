@@ -28,7 +28,11 @@ These instructions will get you a copy of the project up and running on your loc
 You will need to have the following installed on your local machine in order for the code to run in your local environment.
 
 
-**[Docker](https://www.docker.com/products/docker-desktop)**
+| Required | Link                                              |
+| -------- | ------------------------------------------------- |
+| Docker   | https://www.docker.com/products/docker-desktop    |
+
+
 
 
 ### Installing <a name = "installing"></a>
