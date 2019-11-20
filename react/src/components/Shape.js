@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import BgImage from "./../scenebg.jpg"
+import BgImage from "./../background.jpg"
 
 import {
     Rectangle

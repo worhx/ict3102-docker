@@ -74,15 +74,43 @@ h1 {
 }
 
 .centerRectangle {
-  text-align: center;
-  padding-left: 40px;
-  padding-right: 40px;
+  position:absolute;
+  margin-left:auto;
+  margin-right:auto;
+  left:20%;
 }
 
 .resultImage {
   max-width: 100%;
   max-height: 100%;
 }
+
+.arrowImage{
+  width: 25px;
+  height: 25px;
+  position: relative;
+  top: -75px;
+}
+
+.bounce{
+  animation: bounce 2s;
+}
+
+@keyframes bounce {
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+  transform: translateY(0);
+  }
+  40% {
+  transform: translateY(-20px);
+  }
+  60% {
+  transform: translateY(-12px);
+  }
+  }
 
 .label {
   position: absolute;
@@ -157,11 +185,16 @@ h1 {
   font-size: x-large;
 }
 
+.instruction{
+  font-weight: bold;
+  padding-top: 15px;
+}
+
 .dropImage{
   width: 50px;
   height: 50px;
   position: relative;
-  top: -50px;
+  top: -40px;
 }
 
 .Status {

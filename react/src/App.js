@@ -1,12 +1,13 @@
 import React, { useState }from "react";
 import './App.css';
 import Cover from './components/Cover';
-import BgImage from './scenebg.jpg';
+import BgImage from './background.jpg';
 // import FileUpload from './components/FileUpload';
 // import { Line } from 'react-lineto';
 import Shape from './components/Shape';
 import ImageUploader from 'react-images-upload';
 import icon from '../src/drop_image.png'
+import arrowIcon from '../src/arrow.jpg'
 
 
 const App = () => {
@@ -25,6 +26,9 @@ const App = () => {
   const doNothing = event => event.preventDefault();
   const [percentage, setPercentage] = useState(0);
   const [enableDragDrop, setEnableDragDrop] = useState(true);
+  const [showResult, setShowResult] = useState(false);
+  const [showArrow, setShowArrow] = useState(false);
+  const [showResultImage, setShowResultImage] = useState(false);
 
   const [stateXhr, setStateXhr] = useState(null);
 
@@ -59,6 +63,9 @@ const App = () => {
 }
 
 const onChange = event => {
+  setShowResult(!showResult);
+  setShowArrow(!showArrow);
+  setShowResultImage(!showResultImage);
   // Begin Reading File
   const files = event.target.files;
 
@@ -66,11 +73,14 @@ const onChange = event => {
   const reader = new FileReader();
   reader.onload = e => setUploadPreview(e.target.result);
   reader.readAsDataURL(file);
+  setShowResult(!showResult);
+  setShowArrow(!showArrow);
+  setShowResultImage(!showResultImage);
 
   // Create Form Data
   const payload = new FormData();
   payload.append('file', file);
-  fetch('http://localhost:1800/api/yolo', {
+  fetch('http://localhost:90/api/yolo', {
           method: 'POST',
           body: payload
         })
@@ -90,6 +100,12 @@ const onChange = event => {
 } 
 
   const onDrop = event => {
+    setShowResult(!showResult);
+    setShowArrow(!showArrow);
+    setShowResultImage(!showResultImage);
+
+    var sec = new Date().getSeconds()
+    console.log("1st " + sec)
     const supportedFilesTypes = ['image/jpeg', 'image/png'];
     const { type } = event.dataTransfer.files[0];
     if (supportedFilesTypes.indexOf(type) > -1 && enableDragDrop) {
@@ -97,6 +113,9 @@ const onChange = event => {
         const reader = new FileReader();
         reader.onload = e => setPreview(e.target.result);
         reader.readAsDataURL(event.dataTransfer.files[0]);
+        setShowResult(!showResult);
+        setShowArrow(!showArrow);
+        setShowResultImage(!showResultImage);
 
         // Create Form Data
         const payload = new FormData();
@@ -106,6 +125,10 @@ const onChange = event => {
           			body: payload
               })
               .then(response => {
+                var final = new Date().getSeconds();
+                console.log("2nd " + final)
+                var final = new Date().getSeconds()- sec;
+                console.log("time " + final)
           			response.text().then(body => {
                   const convert_to_proper_json_format = body.replace(/'/g, '"');
                   const json_object = JSON.parse(convert_to_proper_json_format);
@@ -185,8 +208,8 @@ const onChange = event => {
       </div>
     </div>
     <div className="imageHeader">
-       <p>Drop or upload your image below!</p>
-       <p style={{fontSize: 'smaller'}}>Else...You would not be able to see the CNN object detection</p>
+       <p className="instruction">Drop or upload your image below!</p>
+       <p style={{fontSize: 'smaller',color:'grey'}}>Else...You would not be able to see the CNN object detection</p>
     </div>
     <div className="App" onDragEnter={onDragEnter} onDragLeave={onDragLeave} onDragOver={doNothing} onDrop={onDragLeave}>
      {/* <div className={`ImagePreview ${preview ? 'Show' : ''}`}>
@@ -219,16 +242,17 @@ const onChange = event => {
         />
       </div>
     </div>
-
-    {/* <FileUpload/> */}
+    <div style={{textAlign:'center'}}>
+        {showResult && <h2>Result</h2>}
+        {showArrow && <img className="arrowImage bounce" src={arrowIcon}/>}
+      </div>
     <div className="centerRectangle">
-    <img className="resultImage" src={preview || uploadPreview}/>
-    {/* <img className="centerImage" src={preview}/> */}
-        {listOfRect.map(shape => (
-          <Shape label={shape.label} cornerleft={shape.topleft.x} cornertop={shape.topleft.y} height={shape.bottomright.y-shape.topleft.y} width={shape.bottomright.x-shape.topleft.x} key={shape.label+shape.topleft.x}/>
-        ))}
+      {showResultImage && <img className="resultImage" src={preview || uploadPreview}/>}
+      {/* <img className="centerImage" src={preview}/> */}
+          {listOfRect.map(shape => (
+            <Shape label={shape.label} cornerleft={shape.topleft.x} cornertop={shape.topleft.y} height={shape.bottomright.y-shape.topleft.y} width={shape.bottomright.x-shape.topleft.x} key={shape.label+shape.topleft.x}/>
+          ))}
     </div>
-    {/* <Shape/> */}
   </div>
   );
 };
