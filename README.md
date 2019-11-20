@@ -1,6 +1,6 @@
 # ICT3102 - Docker
 ![Docker](https://logz.io/wp-content/uploads/2016/01/docker-facebook.png)
-## Table of Contents
+## :bookmark_tabs:Table of Contents
 
 - [About](#about)
 - [System Architecture](#system_architecture)
@@ -46,7 +46,7 @@ docker-compose up
 
 ```
 
-## Built Using <a name = "built_using"></a>
+##:hammer: Built Using <a name = "built_using"></a>
 
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 - [Nginx](https://www.nginx.com/)
