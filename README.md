@@ -47,12 +47,13 @@ docker-compose up
 
 ## Built Using <a name = "built_using"></a>
 
-- [Python](https://www.python.org/)
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/)
-- [Nodejs](https://nodejs.org/en/)
-- [React](https://reactjs.org/)
 - [Nginx](https://www.nginx.com/)
+- [Nodejs](https://nodejs.org/en/)
+- [Python](https://www.python.org/)
+- [React](https://reactjs.org/)
 - [YOLO](https://pjreddie.com/darknet/yolo/)
+
 
 ## Authors <a name = "authors"></a>
 
