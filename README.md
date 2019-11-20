@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [About](#about)
+- [System Architecture](#system_architecture)
 - [Getting Started](#getting_started)
 - [Prerequisites](#prerequisities)
 - [Installing](#installing)
@@ -12,6 +13,10 @@
 ## About <a name = "about"></a>
 
 This project allows users to upload an image onto the application and receive a new image with the YOLO image object detection implmented.
+
+## System Architecture <a name = "system_architecture"></a>
+
+![System Architecture](System Architecture.jpg)
 
 ## Getting Started <a name = "getting_started"></a>
 
