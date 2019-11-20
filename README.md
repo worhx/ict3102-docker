@@ -77,8 +77,8 @@ Lightweight
 
 | Student ID & Email | Name & LinkedIn | GitHub |
 | -------- | ------------------------------------------------- |--------|
-| [1702555](mailto:1702555@sit.singaporetech.edu.sg) | [Cassandra Leong Sok Yee](https://www.linkedin.com/in/cassandra-leong-738317bb) |
-| [1702673](mailto:1702673@sit.singaporetech.edu.sg) | [Chen Guan Hua](https://www.linkedin.com/in/guanhua-chen-04a420174/) |
+| [1702555](mailto:1702555@sit.singaporetech.edu.sg) | [Cassandra Leong Sok Yee](https://www.linkedin.com/in/cassandra-leong-738317bb)|[X](https://github.com/x)|  
+| [1702673](mailto:1702673@sit.singaporetech.edu.sg) | [Chen Guan Hua](https://www.linkedin.com/in/guanhua-chen-04a420174/) |[Lunchenmeat](https://github.com/Lunchenmeat)
 | [1702419](mailto:1702419@sit.singaporetech.edu.sg) | [Ong Xuan](https://www.linkedin.com/in/xuan-ong-50752910a/) |[Xuanong](https://github.com/Xuanong)|  
 | [1700512](mailto:1700512@sit.singaporetech.edu.sg) | [Quek Jun Hao](https://www.linkedin.com/in/jun-hao-quek-5455a0175/) |[QJunHao](https://github.com/QJunHao)| 
 | [1701591](mailto:1701591@sit.singaporetech.edu.sg) | [Ker Beng Hian](https://www.linkedin.com/in/benghianker/) |[worhx](https://github.com/worhx)
