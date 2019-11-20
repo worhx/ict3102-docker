@@ -52,6 +52,7 @@ docker-compose up
 - [Nodejs](https://nodejs.org/en/)
 - [React](https://reactjs.org/)
 - [Nginx](https://www.nginx.com/)
+- [YOLO](https://pjreddie.com/darknet/yolo/)
 
 ## Authors <a name = "authors"></a>
 
