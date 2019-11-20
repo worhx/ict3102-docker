@@ -15,7 +15,7 @@
 
 This project allows users to upload an image onto the application and receive a new image with the YOLO image object detection implmented.
 
-## System Architecture <a name = "system_architecture"></a>
+## :computer: System Architecture <a name = "system_architecture"></a>
 
 ![System Architecture](System_Architecture.jpg)
 
