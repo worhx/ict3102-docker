@@ -72,7 +72,7 @@ Lightweight
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- SIT ICT SE - Class of 2021 ICT3102 Team 7 :singapore:
+- SIT ICT SE - Class of 2021 ICT3102 Team 7
 
 
 | :email: Student ID & Email | Name & LinkedIn | GitHub |
@@ -84,5 +84,5 @@ Lightweight
 | [1701591](mailto:1701591@sit.singaporetech.edu.sg) | [Ker Beng Hian](https://www.linkedin.com/in/benghianker/) |[worhx](https://github.com/worhx)
 | [1701217](mailto:1701217@sit.singaporetech.edu.sg) | [Tan Qin Xiang](https://www.linkedin.com/in/qin-xiang-tan-19570a113/) |[tqx2012](https://github.com/tqx2012)|
 
-## Acknowledgments <a name = "acknowledgments"></a>
+## :man_teacher: Acknowledgments <a name = "acknowledgments"></a>
 - Trieu for [darkflow](https://github.com/thtrieu/darkflow.git)
