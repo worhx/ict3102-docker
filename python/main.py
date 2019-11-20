@@ -22,6 +22,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 options = {"model": "./cfg/yolo.cfg",
                "load": "./cfg/yolov2.weights", "threshold": 0.25, "gpu": 1.0, "json": True}
 tfnet = TFNet(options)
+
 @app.route("/test/nia", methods=['GET'])
 def test():
     return"hello"
@@ -37,8 +38,8 @@ def fileUpload():
     return destination
 
 
-@app.route("/api/yolo", methods=['POST'])
-def yoloapi():
+@app.route("/api/detect", methods=['POST'])
+def detect():
     destination = fileUpload()
     # options = {"model": "./cfg/yolo.cfg",
     #            "load": "./cfg/yolov2.weights", "threshold": 0.1, "gpu": 1.0, "json": True}

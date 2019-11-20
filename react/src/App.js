@@ -80,7 +80,7 @@ const onChange = event => {
   // Create Form Data
   const payload = new FormData();
   payload.append('file', file);
-  fetch('http://localhost:90/api/yolo', {
+  fetch('http://localhost:90/api/detect', {
           method: 'POST',
           body: payload
         })
@@ -120,21 +120,15 @@ const onChange = event => {
         // Create Form Data
         const payload = new FormData();
         payload.append('file', event.dataTransfer.files[0]);
-        fetch('http://localhost:90/api/yolo', {
+        fetch('http://localhost:90/api/detect', {
           			method: 'POST',
           			body: payload
               })
               .then(response => {
-                var final = new Date().getSeconds();
-                console.log("2nd " + final)
-                var final = new Date().getSeconds()- sec;
-                console.log("time " + final)
           			response.text().then(body => {
                   const convert_to_proper_json_format = body.replace(/'/g, '"');
                   const json_object = JSON.parse(convert_to_proper_json_format);
-
                   setListOfRect(Array.from(json_object));
-                  console.log(json_object);
                   setStatus('Results Below');
                   setEnableDragDrop(true);
           				// this.setState({ imageURL: `http://localhost:5000/${body.file}` });
