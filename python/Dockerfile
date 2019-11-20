@@ -1,4 +1,4 @@
-FROM tiangolo/uvicorn-gunicorn-fastapi:python3.6
+FROM tiangolo/meinheld-gunicorn:python3.6
 
 WORKDIR /app
 

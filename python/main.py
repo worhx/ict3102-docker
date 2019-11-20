@@ -20,7 +20,7 @@ UPLOAD_FOLDER = './img'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 options = {"model": "./cfg/yolo.cfg",
-               "load": "./cfg/yolov2.weights", "threshold": 0.1, "gpu": 1.0, "json": True}
+               "load": "./cfg/yolov2.weights", "threshold": 0.25, "gpu": 1.0, "json": True}
 tfnet = TFNet(options)
 @app.route("/test/nia", methods=['GET'])
 def test():
