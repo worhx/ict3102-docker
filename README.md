@@ -55,16 +55,20 @@ docker-compose up
 - [React](https://reactjs.org/)
 - [YOLO](https://pjreddie.com/darknet/yolo/)
 
-## Python <a name = "python"></a>
 
 ## Flask <a name = "flask"></a>
 Lightweight 
 
-## React <a name = "react"></a>
-
 ## Nginx <a name = "nginx"></a>
 
 ## Nodejs <a name = "nodejs"></a>
+
+## Python <a name = "python"></a>
+
+## React <a name = "react"></a>
+
+## YOLO <a name = "yolo"></a>
+
 
 ## Authors <a name = "authors"></a>
 
