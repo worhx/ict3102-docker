@@ -70,7 +70,7 @@ Lightweight
 ## YOLO <a name = "yolo"></a>
 
 
-## Authors <a name = "authors"></a>
+## ✍️ Authors <a name = "authors"></a>
 
 - SIT ICT SE - Class of 2021 ICT3102 Team 7
 
