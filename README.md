@@ -60,7 +60,7 @@ The server should be up and running on http://localhost and you will be able to 
 
 ## Authors <a name = "authors"></a>
 
-- SIT ICT SE - Class of 2021 ICT3102 Team 2
+- SIT ICT SE - Class of 2021 ICT3102 Team 7
 
 
 | Student ID |         LinkedIn                                              |
