@@ -12,8 +12,7 @@ RUN pip install ./darkflow
 
 COPY requirements.txt requirements.txt
 
-RUN pip3 install -r requirements.txt \
-	&& export FLASK_DEBUG=1
+RUN pip3 install -r requirements.txt 
 
 COPY . .
 
