@@ -48,26 +48,23 @@ docker-compose up
 
 ## :hammer: Built Using <a name = "built_using"></a>
 
-- [Flask](https://flask.palletsprojects.com/en/1.1.x/)
-- [Nginx](https://www.nginx.com/)
-- [Nodejs](https://nodejs.org/en/)
-- [Python](https://www.python.org/)
-- [React](https://reactjs.org/)
-- [YOLO](https://pjreddie.com/darknet/yolo/)
-
-
-# Flask <a name = "flask"></a>
+### [Flask](https://flask.palletsprojects.com/en/1.1.x/) <a name = "flask"></a>
 Lightweight 
 
-# Nginx <a name = "nginx"></a>
+### [Nginx](https://www.nginx.com/)  <a name = "nginx"></a>
+XXX
 
-# Nodejs <a name = "nodejs"></a>
+### [Nodejs](https://nodejs.org/en/) <a name = "nodejs"></a>
+xxx
 
-# Python <a name = "python"></a>
+### [Python](https://www.python.org/) <a name = "python"></a>
+xxx
+### [React](https://reactjs.org/) <a name = "react"></a>
+xxx
+### [YOLO](https://pjreddie.com/darknet/yolo/) <a name = "yolo"></a>
+xxx
 
-# React <a name = "react"></a>
-
-# YOLO <a name = "yolo"></a>
+ 
 
 
 ## ✍️ Authors <a name = "authors"></a>
