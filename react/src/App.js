@@ -134,7 +134,7 @@ const onChange = event => {
                   const json_object = JSON.parse(convert_to_proper_json_format);
 
                   setListOfRect(Array.from(json_object));
-
+                  console.log(json_object);
                   setStatus('Results Below');
                   setEnableDragDrop(true);
           				// this.setState({ imageURL: `http://localhost:5000/${body.file}` });
@@ -185,15 +185,6 @@ const onChange = event => {
     setPercentage(0);
     setEnableDragDrop(true);
   };
-
-  // const test = React.createElement(Rectangle, {corner: [430, 160], height: 500, width: 1000, color: '#ff8f00'})
-  const SHAPES = [
-    // {label: "Clock", cornerleft: 402, cornertop: 131, height: 72, width:85},
-    // {label: "Car", cornerleft: 200, cornertop: 380, height: 500, width:1000},
-    // {label: "Another Car", cornerleft: 100, cornertop: 290, height: 500, width:200},
-
-    // [[430, 160], 500, 1000], 
-  ]
 
   const testData = 
     {"data": "[{'label': 'truck', 'confidence': 0.29664555, 'topleft': {'x': 40, 'y': 56}, 'bottomright': {'x': 72, 'y': 73}}, {'label': 'car', 'confidence': 0.1504619, 'topleft': {'x': 34, 'y': 62}, 'bottomright': {'x': 122, 'y': 160}}, {'label': 'truck', 'confidence': 0.17571694, 'topleft': {'x': 69, 'y': 54}, 'bottomright': {'x': 125, 'y': 84}}, {'label': 'truck', 'confidence': 0.16826874, 'topleft': {'x': 126, 'y': 61}, 'bottomright': {'x': 149, 'y': 74}}, {'label': 'truck', 'confidence': 0.46485534, 'topleft': {'x': 17, 'y': 40}, 'bottomright': {'x': 205, 'y': 164}}]"}
@@ -250,7 +241,7 @@ const onChange = event => {
       {showResultImage && <img className="resultImage" src={preview || uploadPreview}/>}
       {/* <img className="centerImage" src={preview}/> */}
           {listOfRect.map(shape => (
-            <Shape label={shape.label} cornerleft={shape.topleft.x} cornertop={shape.topleft.y} height={shape.bottomright.y-shape.topleft.y} width={shape.bottomright.x-shape.topleft.x} key={shape.label+shape.topleft.x}/>
+            <Shape label={shape.label} confidence={shape.confidence} cornerleft={shape.topleft.x} cornertop={shape.topleft.y} height={shape.bottomright.y-shape.topleft.y} width={shape.bottomright.x-shape.topleft.x} key={shape.label+shape.topleft.x}/>
           ))}
     </div>
   </div>
