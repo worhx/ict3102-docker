@@ -16,7 +16,7 @@ This project allows users to upload an image onto the application and receive a 
 
 ## System Architecture <a name = "system_architecture"></a>
 
-![System Architecture](System Architecture.jpg)
+![System Architecture](System_Architecture.jpg)
 
 ## Getting Started <a name = "getting_started"></a>
 
