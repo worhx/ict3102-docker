@@ -1,5 +1,5 @@
 # ICT3102 - Docker
-
+![Docker](https://res.cloudinary.com/practicaldev/image/fetch/s--FhcHFY1a--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.docker.com/sites/default/files/social/docker-facebook-share.png)
 ## Table of Contents
 
 - [About](#about)
