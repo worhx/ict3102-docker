@@ -46,7 +46,7 @@ docker-compose up
 
 ```
 
-##:hammer: Built Using <a name = "built_using"></a>
+## :hammer: Built Using <a name = "built_using"></a>
 
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 - [Nginx](https://www.nginx.com/)
@@ -75,7 +75,7 @@ Lightweight
 - SIT ICT SE - Class of 2021 ICT3102 Team 7
 
 
-| Student ID & Email | Name & LinkedIn | GitHub |
+| :email: Student ID & Email | Name & LinkedIn | GitHub |
 | -------- | ------------------------------------------------- |--------|
 | [1702555](mailto:1702555@sit.singaporetech.edu.sg) | [Cassandra Leong Sok Yee](https://www.linkedin.com/in/cassandra-leong-738317bb)|[X](https://github.com/x)|  
 | [1702673](mailto:1702673@sit.singaporetech.edu.sg) | [Chen Guan Hua](https://www.linkedin.com/in/guanhua-chen-04a420174/) |[Lunchenmeat](https://github.com/Lunchenmeat)
