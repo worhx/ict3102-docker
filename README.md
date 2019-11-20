@@ -1,4 +1,4 @@
-# ICT3102 - Docker
+# ICT3102 - Docker Team 7
 ![Docker](https://logz.io/wp-content/uploads/2016/01/docker-facebook.png)
 ## :bookmark_tabs:Table of Contents
 
