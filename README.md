@@ -9,6 +9,7 @@
 - [Installing](#installing)
 - [Built Using](#built_using)
 - [Authors](#authors)
+- [Acknowledgments](#acknowledgments)
 
 ## About <a name = "about"></a>
 
@@ -69,3 +70,5 @@ docker-compose up
 | 1701591 | [Ker Beng Hian](https://www.linkedin.com/in/benghianker/) |
 | 1701217 | [Tan Qin Xiang](https://www.linkedin.com/in/qin-xiang-tan-19570a113/)  |
 
+## Acknowledgments <a name = "acknowledgments"></a>
+- Trieu for [darkflow](https://github.com/thtrieu/darkflow.git)
