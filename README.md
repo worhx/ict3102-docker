@@ -58,12 +58,10 @@ Lightweight
 Nginx is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache. It allows the request from the client to be properly distributed (round robin) such that the multiple flask services can receive the requests equally. By having multiple flask services, it improves the availability of the application such that in the event of a flask service being down, the other flask service can still process the request. Load balancing reduces the stress on a single service and increases the performance of the application.
 
 ### [React](https://reactjs.org/) <a name = "react"></a>
-React is one of the best performing frontend framework. One of the advantages of React is the fast rendering which uses virtual DOM through React's [memory reconciliation algorithm](https://reactjs.org/docs/reconciliation.html) as opposed to conventional DOM which is tree structured and small changes at the top layers creates a ripple effect to the interface.  
+ReactJS is one of the best performing frontend framework as it is designed to be a simple and lightweight Javascript Library. One of the advantages of React is the fast rendering which uses virtual DOM through React's [memory reconciliation algorithm](https://reactjs.org/docs/reconciliation.html) as opposed to conventional DOM which is tree structured and small changes at the top layers creates a ripple effect to the interface.  
 
 ### [Docker](https://www.docker.com/) <a name = "docker"></a>
 
-
-### [YOLO](https://pjreddie.com/darknet/yolo/) <a name = "yolo"></a>
 
 
  
