@@ -1,5 +1,5 @@
 # ICT3102 - Docker Team 7
-![Docker](https://logz.io/wp-content/uploads/2016/01/docker-facebook.png)
+![Docker](Title.png)
 ## :bookmark_tabs:Table of Contents
 
 - [About](#about)
@@ -14,6 +14,10 @@
 ## 🧐  About <a name = "about"></a>
 
 This project allows users to upload an image onto the application and receive a new image with the YOLO image object detection implmented.
+
+![Upload Image](UploadImage.png)
+
+![Result](Result.png)
 
 ## :computer: System Architecture <a name = "system_architecture"></a>
 
