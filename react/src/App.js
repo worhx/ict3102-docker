@@ -2,8 +2,6 @@ import React, { useState }from "react";
 import './App.css';
 import Cover from './components/Cover';
 import BgImage from './background.jpg';
-// import FileUpload from './components/FileUpload';
-// import { Line } from 'react-lineto';
 import Shape from './components/Shape';
 import ImageUploader from 'react-images-upload';
 import icon from '../src/drop_image.png'
@@ -11,14 +9,6 @@ import arrowIcon from '../src/arrow.jpg'
 
 
 const App = () => {
-
-  // this.state = {
-  //   //  test: "asd"
-  //   //  ListOfRect: {}
-  // };
-
-  // updateList = res => this.setState({ListOfRect: {res}})
-
 
   const [status, setStatus] = useState('Drop Here');
   const [preview, setPreview] = useState(null);
@@ -30,13 +20,9 @@ const App = () => {
   const [showArrow, setShowArrow] = useState(false);
   const [showResultImage, setShowResultImage] = useState(false);
 
-  const [stateXhr, setStateXhr] = useState(null);
+  const [stateXhr] = useState(null);
 
   const [listOfRect, setListOfRect] = useState([]);
-
-  // const [listOfRect, setListOfRect] = useState([{label: "Clock", topleft: {x: 123, y: 321}, bottomright: {x: 234, y: 567}}]);
-  // {'label': 'traffic light', 'confidence': 0.46783975, 'topleft': {'x': 297, 'y': 83}, 'bottomright': {'x': 317, 'y': 122}}
-
 
   const onDragEnter = event => {
     console.log(event);
@@ -93,7 +79,6 @@ const onChange = event => {
 
             setStatus('Results Below');
             setEnableDragDrop(true);
-            // this.setState({ imageURL: `http://localhost:5000/${body.file}` });
           });
         });
     setEnableDragDrop(false);
@@ -131,41 +116,9 @@ const onChange = event => {
                   setListOfRect(Array.from(json_object));
                   setStatus('Results Below');
                   setEnableDragDrop(true);
-          				// this.setState({ imageURL: `http://localhost:5000/${body.file}` });
           			});
           		});
-        // XHR - New XHR Request
-        // const xhr = new XMLHttpRequest();
-        
-        //             // XHR - Upload Progress
-        //             xhr.upload.onprogress = (e) => {
-        //               const done = e.position || e.loaded
-        //               const total = e.totalSize || e.total;
-        //               const perc = (Math.floor(done/total*1000)/10);
-        //               if (perc >= 100) {
-        //                   setStatus('Done');
-        //                   setEnableDragDrop(true);
 
-        //                                       // Delayed reset
-        //                   setTimeout(() => {
-        //                     setPreview(null);
-        //                     setStatus('Drop Here');
-        //                     setPercentage(0);
-        //                     setEnableDragDrop(true);
-        //                   }, 750); // To match the transition 500 / 250
-
-        //               } else {
-        //                   setStatus(`${perc}%`);
-        //               }
-        //               setPercentage(perc); 
-        //           };
-
-        // // XHR - Make Request  
-        // xhr.open('POST', 'http://localhost:1800/api/yolo');
-        // xhr.send(payload);
-        
-        // console.log(xhr.response);
-        // setStateXhr(xhr);
         setEnableDragDrop(false);
     }
     
@@ -180,10 +133,6 @@ const onChange = event => {
     setEnableDragDrop(true);
   };
 
-  const testData = 
-    {"data": "[{'label': 'truck', 'confidence': 0.29664555, 'topleft': {'x': 40, 'y': 56}, 'bottomright': {'x': 72, 'y': 73}}, {'label': 'car', 'confidence': 0.1504619, 'topleft': {'x': 34, 'y': 62}, 'bottomright': {'x': 122, 'y': 160}}, {'label': 'truck', 'confidence': 0.17571694, 'topleft': {'x': 69, 'y': 54}, 'bottomright': {'x': 125, 'y': 84}}, {'label': 'truck', 'confidence': 0.16826874, 'topleft': {'x': 126, 'y': 61}, 'bottomright': {'x': 149, 'y': 74}}, {'label': 'truck', 'confidence': 0.46485534, 'topleft': {'x': 17, 'y': 40}, 'bottomright': {'x': 205, 'y': 164}}]"}
-  
-
   return (
   <div>
     <div>
@@ -197,9 +146,6 @@ const onChange = event => {
        <p style={{fontSize: 'smaller',color:'grey'}}>Else...You would not be able to see the CNN object detection</p>
     </div>
     <div className="App" onDragEnter={onDragEnter} onDragLeave={onDragLeave} onDragOver={doNothing} onDrop={onDragLeave}>
-     {/* <div className={`ImagePreview ${preview ? 'Show' : ''}`}>
-          <div style={{ backgroundImage: `url(${preview})` }}></div>
-     </div> */}
       <div className={`DropArea ${status === 'Drop' ? 'Over' : ''} ${status.indexOf('%') > -1 || status === 'Done' ? 'Uploading' : ''}`} onDragOver={onDragOver} onDragLeave={onDragEnter} onDrop={onDrop}>
         <div className={`ImageProgress ${preview ? 'Show' : ''}`}>
           <div className="ImageProgressImage" style={{ backgroundImage: `url(${preview})` }}></div>
@@ -233,7 +179,6 @@ const onChange = event => {
       </div>
     <div className="centerRectangle">
       {showResultImage && <img className="resultImage" src={preview || uploadPreview}/>}
-      {/* <img className="centerImage" src={preview}/> */}
           {listOfRect.map(shape => (
             <Shape label={shape.label} confidence={shape.confidence} cornerleft={shape.topleft.x} cornertop={shape.topleft.y} height={shape.bottomright.y-shape.topleft.y} width={shape.bottomright.x-shape.topleft.x} key={shape.label+shape.topleft.x}/>
           ))}
