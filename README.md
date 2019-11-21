@@ -34,8 +34,7 @@ You will need to have the following installed on your local machine in order for
 
 
 
-
-### Installing <a name = "installing"></a>
+### Installation <a name = "installation"></a>
 
 Clone this repository to your desired directory.
 ```
@@ -55,16 +54,13 @@ docker-compose up
 Lightweight 
 
 ### [Nginx](https://www.nginx.com/)  <a name = "nginx"></a>
-Nginx is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache. It allows the request from the client to be properly distributed (round robin) such that the multiple flask services can receive the requests equally. By having multiple flask services, it improves the availability of the application such that in the event of a flask service being down, the other flask service can still process the request. Load balancing reduces the stress on a single service and increases the performance of the application.
+Nginx is a web server which can also be used as a reverse proxy and a load balancer. It allows the request from the client to be properly distributed (round robin) such that the multiple flask services can receive the requests equally. By having multiple flask services, it improves the availability of the application such that in the event of a flask service being down or if it is busy servicing an existing request, the other flask service can still process a new request. Load balancing reduces the stress on a single service and increases the performance of the application.
 
 ### [React](https://reactjs.org/) <a name = "react"></a>
 ReactJS is one of the best performing frontend framework as it is designed to be a simple and lightweight Javascript Library. One of the advantages of React is the fast rendering which uses virtual DOM through React's [memory reconciliation algorithm](https://reactjs.org/docs/reconciliation.html) as opposed to conventional DOM which is tree structured and small changes at the top layers creates a ripple effect to the interface.  
 
 ### [Docker](https://www.docker.com/) <a name = "docker"></a>
 
-
-
- 
 
 
 ## ✍️ Authors <a name = "authors"></a>
