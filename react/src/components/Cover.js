@@ -16,7 +16,7 @@ class Cover extends Component {
                     <div style={{ backgroundImage: `url(${BgImage})` }} />
                 </div>
                 <div className="centeredfull">
-                    <h1>Practical CNN Object Detection</h1>
+                    <h1>YOLO Docker Project</h1>
                 </div>
                 <div className="author">
                     <p className="teamStyle">Team 07</p>

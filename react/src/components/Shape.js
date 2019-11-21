@@ -19,6 +19,7 @@ import {
                 }}>
                 <p>{label + " " + Number((confidence).toFixed(2))}</p>
              </div>
+             {console.log("2nd " + new Date().getSeconds())}
         </div>
     );
 export default Shape;
