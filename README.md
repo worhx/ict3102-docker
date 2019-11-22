@@ -17,11 +17,22 @@ This project allows users to upload an image onto the application and receive a 
 
 ![Upload Image](UploadImage.png)
 
+User can choose to upload image conventionally using the file explorer or simply drag and drop an image that will instantly trigger the object detection process.
+
 ![Result](Result.png)
+The uploaded image is immediately rendered at the bottom of the screen and once the response (positions, labels, confidences) is received, it will simply overlay the image with the rectangles and other information instead of having to re-render the entire image.
 
 ## :computer: System Architecture <a name = "system_architecture"></a>
 
 ![System Architecture](System_Architecture.jpg)
+
+At the frontend (React), client will upload an image which will trigger a REST API call (POST) to port 90 where the NGINX web server will be listening. The image file will be sent as the body of the POST request. All request will be proxied to the server group consisting currently of two flask services that can handle the POST request. This essentially forms a reverse proxy pattern where NGINX retrieves resources on behalf of the client from the two flask services and returns the response to the client. 
+
+NGINX will decide which of the two flask services to delegate the POST request to based on least connection load balancing. Least connection method was chosen as it appears to be a fairer choice compared to the default round robin that only allocates load sequentially. This is because image sizes and amount of possible objects to be detected can differ from image to image. Instead of blindly following a sequence to distribute load, the load can be distributed based on which server is the least busy at that moment. 
+
+Upon receiving the request from NGINX, the flask service will then process the image through the YOLO object detection algorithm and generate the positions, labels, and confidence of each object into a json response. The threshold of 0.1 for object confidence was increased to 0.25 to reduce objects that are probably inaccurate to be omitted from the response. This will reduce the size of the response and increase the response time of the API call.
+
+The response will then be directed back from NGINX to React and based on the positions, React will render out the rectangles, labels, and confidences onto the respective objects that was detected. The reason for rendering on the frontend is so that the data in transit will be significantly reduced since only a very small amount of JSON data is being passed through the API calls as compared to the entire image being sent. This again, helps to improve the response time of the process of uploading an image to receiving the objects detected.
 
 ## Getting Started <a name = "getting_started"></a>
 
@@ -69,7 +80,7 @@ Each component of the application is stored in its own containers that communica
 Optimizing Docker
 - Choosing smaller sized images that provides the same functionalities as full sized images (e.g. nginx:1.13.7-alpine, tiangolo/meinheld-gunicorn:python3.6)
 - Run commands on a single line rather than multiple lines (where applicable) to reduce layers.
-- Arrange docker commands that would be changed the least to be at the top of the file to reduce unnecessary rebuilds.
+- Arrange docker commands that would be changed least frequently to be at the top of the file to reduce unnecessary rebuilds.
 
 
 
