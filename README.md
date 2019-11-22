@@ -66,7 +66,7 @@ docker-compose up
 ## :hammer: Built Using <a name = "built_using"></a>
 
 ### [Flask](https://flask.palletsprojects.com/en/1.1.x/) <a name = "flask"></a>
-Lightweight 
+Optimization consideration - Flask is a micro web framework written in Python and does not require particular tools or libraries to run. In addition, Flask do not have database abstraction layer and form-validation. This causes Flask to be lightweight which is important especially in the docker environment where multiple Flask services may be deployed and a smaller sized service will benefit the application as a whole by reducing overheads and improving scalability.
 
 ### [Nginx](https://www.nginx.com/)  <a name = "nginx"></a>
 Optimization consideration - Nginx is a web server which can also be used as a reverse proxy and a load balancer. It allows the request from the client to be properly distributed (round robin) such that the multiple flask services can receive the requests equally. By having multiple flask services, it improves the availability of the application such that in the event of a flask service being down or if it is busy servicing an existing request, the other flask service can still process a new request. Load balancing reduces the stress on a single service and increases the performance of the application.
