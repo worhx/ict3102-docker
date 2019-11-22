@@ -58,12 +58,19 @@ docker-compose up
 Lightweight 
 
 ### [Nginx](https://www.nginx.com/)  <a name = "nginx"></a>
-Nginx is a web server which can also be used as a reverse proxy and a load balancer. It allows the request from the client to be properly distributed (round robin) such that the multiple flask services can receive the requests equally. By having multiple flask services, it improves the availability of the application such that in the event of a flask service being down or if it is busy servicing an existing request, the other flask service can still process a new request. Load balancing reduces the stress on a single service and increases the performance of the application.
+Optimization consideration - Nginx is a web server which can also be used as a reverse proxy and a load balancer. It allows the request from the client to be properly distributed (round robin) such that the multiple flask services can receive the requests equally. By having multiple flask services, it improves the availability of the application such that in the event of a flask service being down or if it is busy servicing an existing request, the other flask service can still process a new request. Load balancing reduces the stress on a single service and increases the performance of the application.
 
 ### [React](https://reactjs.org/) <a name = "react"></a>
-ReactJS is one of the best performing frontend framework as it is designed to be a simple and lightweight Javascript Library. One of the advantages of React is the fast rendering which uses virtual DOM through React's [memory reconciliation algorithm](https://reactjs.org/docs/reconciliation.html) as opposed to conventional DOM which is tree structured and small changes at the top layers creates a ripple effect to the interface.  
+Optimization consideration - ReactJS is one of the best performing frontend framework as it is designed to be a simple and lightweight Javascript Library. One of the advantages of React is the fast rendering which uses virtual DOM through React's [memory reconciliation algorithm](https://reactjs.org/docs/reconciliation.html) as opposed to conventional DOM which is tree structured and small changes at the top layers creates a ripple effect to the interface.  
 
 ### [Docker](https://www.docker.com/) <a name = "docker"></a>
+Each component of the application is stored in its own containers that communicates through the team's designed networks and ports.
+
+Optimizing Docker
+- Choosing smaller sized images that provides the same functionalities as full sized images (e.g. nginx:1.13.7-alpine, tiangolo/meinheld-gunicorn:python3.6)
+- Run commands on a single line rather than multiple lines (where applicable) to reduce layers.
+- Arrange docker commands that would be changed the least to be at the top of the file to reduce unnecessary rebuilds.
+
 
 
 
@@ -82,7 +89,7 @@ ReactJS is one of the best performing frontend framework as it is designed to be
 | [1701217](mailto:1701217@sit.singaporetech.edu.sg) | [Tan Qin Xiang](https://www.linkedin.com/in/qin-xiang-tan-19570a113/) |[tqx2012](https://github.com/tqx2012)|
 
 ## :man_teacher: Acknowledgments <a name = "acknowledgments"></a>
-- [Darkflow](https://github.com/thtrieu/darkflow.git)
+- Trieu for [darkflow](https://github.com/thtrieu/darkflow.git)
 - [Drag & Drop](https://medium.com/@mannycodes/build-a-react-drag-drop-progress-file-uploader-fb874c515a7)
 - [Meinheld Gunicorn Flask](https://github.com/tiangolo/meinheld-gunicorn-flask-docker)
 - [Draw shape react](https://github.com/ansu5555/draw-shape-reactjs)
