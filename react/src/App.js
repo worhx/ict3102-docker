@@ -166,8 +166,6 @@ const onChange = event => {
           withIcon={true}
           buttonText='Choose images'
           singleImage={true}
-          // onChange={onChange}
-          // onDrop={onDrop}
           imgExtension={['.jpg', '.gif', '.png', '.gif']}
           maxFileSize={5242880}
         />

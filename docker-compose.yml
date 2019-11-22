@@ -24,7 +24,6 @@ services:
             - main.py
         networks: 
             temp_network:
-    
     flask1:
         build:
             context: python
