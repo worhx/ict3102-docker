@@ -36,7 +36,7 @@ def detect():
     return str(result)
 
 # method to retrieve the destination of the image file stored in the docker container
-def uploadImage:
+def uploadImage():
     target = os.path.join(UPLOAD_FOLDER)
     if not os.path.isdir(target):
         os.mkdir(target)
