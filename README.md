@@ -82,7 +82,7 @@ ReactJS is one of the best performing frontend framework as it is designed to be
 | [1701217](mailto:1701217@sit.singaporetech.edu.sg) | [Tan Qin Xiang](https://www.linkedin.com/in/qin-xiang-tan-19570a113/) |[tqx2012](https://github.com/tqx2012)|
 
 ## :man_teacher: Acknowledgments <a name = "acknowledgments"></a>
-- Trieu for [darkflow](https://github.com/thtrieu/darkflow.git)
+- [Darkflow](https://github.com/thtrieu/darkflow.git)
 - [Drag & Drop](https://medium.com/@mannycodes/build-a-react-drag-drop-progress-file-uploader-fb874c515a7)
 - [Meinheld Gunicorn Flask](https://github.com/tiangolo/meinheld-gunicorn-flask-docker)
 - [Draw shape react](https://github.com/ansu5555/draw-shape-reactjs)
