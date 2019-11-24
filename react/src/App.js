@@ -72,6 +72,7 @@ const onChange = event => {
         })
         .then(response => {
           response.text().then(body => {
+            console.log(body)
             const convert_to_proper_json_format = body.replace(/'/g, '"');
             const json_object = JSON.parse(convert_to_proper_json_format);
 
